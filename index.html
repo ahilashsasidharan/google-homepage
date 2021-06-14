@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<style>
+    body {
+        position: relative; /*does this do anything???*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #search-box{
+        display: flex;
+        padding: 5px;
+        margin: 20px;
+        flex-direction: row;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 2em;
+    }
+    #search-box :focus{
+        border-color: blue;
+    }
+    #search-input{
+        border: none;
+        outline:none;
+        width: 500px;
+    }
+    #google-logo {
+        width: 272px;
+        height: 92px;
+    }
+#search-icon{
+        font-size: 20px;
+        height: 20px;
+    }
+</style>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <title>Google</title>
+</head>
+<body>
+<img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+<div id="search-box">  
+    <span class="material-icons-outlined" id="search-icon">search</span>
+    <input id="search-input" type="text">
+</div>
+<div>
+<button>Google Search</button>
+<button>I'm Feeling Lucky</button> 
+</div>
+</body>
+</html>
