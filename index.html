@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <style>
     #all-element-flex-container {
-        position: relative; /*does this do anything???*/
-        flex: 1;
+        /* position: relative; does this do anything???*/
+        /*flex: 1; does this do anything???*/
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    body{
+        margin:0;
     }
     #search-box{
         display: flex;
@@ -58,15 +61,17 @@
     }
     #sign-in-link{
         width: 90px;
-        height: 40px;
+        height: 35px;
         font-size: 14px;
         color: white;
-        background-color: #3da9db; 
+        background-color: rgb(26, 115, 232); 
+        border-width: 1px;
+        border-radius: 20%;
     }
-    .top-nav-bar-left-elements{
+    .nav-bar-left-elements{
         margin-left: 15px;
     }
-    .top-nav-bar-right-elements{
+    .nav-bar-right-elements{
         margin-right: 15px;
     }
     #top-nav-bar-left{
@@ -75,10 +80,21 @@
     }
     #top-nav-bar-right{
         display: flex;
-        justify-content: flex-end;
+        /*justify-content: flex-end;*/
         align-items: center;
     }
-        
+    #bottom-nav-bar{
+        background-color: rgb(242, 242, 242);
+        width: 100%; 
+        height: 50px; 
+        position: absolute;
+        bottom: 0;
+        margin:0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 </style>
 
 <html>
@@ -91,14 +107,14 @@
 <div id="all-element-flex-container">
     <div id="top-nav-bar">
         <div id="top-nav-bar-left">
-            <a href="https://about.google/" id="about-link" class="top-nav-bar-left-elements">About</a>
-            <a href="https://store.google.com/CA/?hl=en" id="store-link" class="top-nav-bar-left-elements">Store</a>
+            <a href="https://about.google/" id="about-link" class="nav-bar-left-elements">About</a>
+            <a href="https://store.google.com/CA/?hl=en" id="store-link" class="nav-bar-left-elements">Store</a>
         </div>
         <div id="top-nav-bar-right">
-            <a href="https://www.google.com/intl/en-GB/gmail/about/" id="gmail-link" class="top-nav-bar-right-elements">Gmail</a>
-            <a href="https://www.google.ca/imghp?hl=en&ogbl" id="images-link" class="top-nav-bar-right-elements">Images</a>
-            <span class="material-icons-outlined top-nav-bar-right-elements" id="app-icon">apps</span>
-            <a href="https://github.com/ahilashsasidharan"><button id="sign-in-link" class="top-nav-bar-right-elements">Sign in</button></a>
+            <a href="https://www.google.com/intl/en-GB/gmail/about/" id="gmail-link" class="nav-bar-right-elements">Gmail</a>
+            <a href="https://www.google.ca/imghp?hl=en&ogbl" id="images-link" class="nav-bar-right-elements">Images</a>
+            <span class="material-icons-outlined nav-bar-right-elements" id="app-icon">apps</span>
+            <a href="https://github.com/ahilashsasidharan"><button id="sign-in-link" class="nav-bar-right-elements">Sign in</button></a>
         </div>
     </div>
     <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
@@ -109,6 +125,18 @@
     <div>
         <button class="buttons">Google Search</button>
         <button class="buttons">I'm Feeling Lucky</button> 
+    </div>
+    <div id="bottom-nav-bar">
+        <div>
+            <a href="#" class="nav-bar-left-elements">Advertising</a>
+            <a href="#" class="nav-bar-left-elements">Business</a>
+            <a href="#" class="nav-bar-left-elements">How Search Works</a>
+        </div>
+        <div>
+            <a href="#" class="nav-bar-right-elements">Privacy</a>
+            <a href="#" class="nav-bar-right-elements">Terms</a>
+            <a href="#" class="nav-bar-right-elements">Settings</a>
+        </div>  
     </div>
 </div>
 </body>
