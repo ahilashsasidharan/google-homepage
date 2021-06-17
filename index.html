@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <style>
-    body {
+    #all-element-flex-container {
         position: relative; /*does this do anything???*/
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     #search-box{
         display: flex;
+        align-items: center;
         padding: 5px;
         margin: 20px;
-        flex-direction: row;
         border-width: 1px;
-        border-color: black;
+        border-color: white;
         border-style: solid;
         border-radius: 2em;
+        height: 30px;
+        box-shadow: 2px 2px 2px 2px gray;
     }
-    #search-box :focus{
+    #search-box:hover{
         border-color: blue;
     }
     #search-input{
@@ -28,26 +31,85 @@
         width: 272px;
         height: 92px;
     }
-#search-icon{
-        font-size: 20px;
+    #search-icon{
+        width: 20px;
         height: 20px;
+        color: gray;
     }
+   
+    #top-nav-bar{
+        margin-bottom: 100px;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    a{
+        font-size: 14px; 
+        color: rgb(34, 34, 34);
+        text-decoration: none;
+        font-family: arial, sans-serif;
+    }
+    a:hover{
+        text-decoration-line: underline;
+        text-decoration-color: rgb(34, 34, 34);
+    }
+    #sign-in-link{
+        width: 90px;
+        height: 40px;
+        font-size: 14px;
+        color: white;
+        background-color: #3da9db; 
+    }
+    .top-nav-bar-left-elements{
+        margin-left: 15px;
+    }
+    .top-nav-bar-right-elements{
+        margin-right: 15px;
+    }
+    #top-nav-bar-left{
+        display: flex;
+        align-items: center;
+    }
+    #top-nav-bar-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+        
 </style>
 
 <html>
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <title>Google</title>
+    <meta charset="UTF-8"/>
 </head>
 <body>
-<img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
-<div id="search-box">  
-    <span class="material-icons-outlined" id="search-icon">search</span>
-    <input id="search-input" type="text">
-</div>
-<div>
-<button>Google Search</button>
-<button>I'm Feeling Lucky</button> 
+<div id="all-element-flex-container">
+    <div id="top-nav-bar">
+        <div id="top-nav-bar-left">
+            <a href="https://about.google/" id="about-link" class="top-nav-bar-left-elements">About</a>
+            <a href="https://store.google.com/CA/?hl=en" id="store-link" class="top-nav-bar-left-elements">Store</a>
+        </div>
+        <div id="top-nav-bar-right">
+            <a href="https://www.google.com/intl/en-GB/gmail/about/" id="gmail-link" class="top-nav-bar-right-elements">Gmail</a>
+            <a href="https://www.google.ca/imghp?hl=en&ogbl" id="images-link" class="top-nav-bar-right-elements">Images</a>
+            <span class="material-icons-outlined top-nav-bar-right-elements" id="app-icon">apps</span>
+            <a href="https://github.com/ahilashsasidharan"><button id="sign-in-link" class="top-nav-bar-right-elements">Sign in</button></a>
+        </div>
+    </div>
+    <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <div id="search-box">  
+        <span class="material-icons-outlined" id="search-icon">search</span>
+        <input id="search-input" type="text">
+    </div>
+    <div>
+        <button class="buttons">Google Search</button>
+        <button class="buttons">I'm Feeling Lucky</button> 
+    </div>
 </div>
 </body>
 </html>
