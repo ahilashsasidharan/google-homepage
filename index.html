@@ -25,6 +25,7 @@
                 border-style: solid;
                 border-radius: 2em;
                 height: 30px;
+                width: 646px;
             }
             #search-box:hover{
                 box-shadow: 2px 2px 2px 2px #dfe1e5;
@@ -32,7 +33,7 @@
             #search-input{
                 border: none;
                 outline:none;
-                width: 500px;
+                width: 600px;
             }
             #google-logo {
                 margin-top: 60px;
@@ -54,6 +55,7 @@
                 height: 40px;
                 justify-content: space-between;
                 width: 100%;
+                margin-bottom: 5%;
             }
             a{
                 font-size: 14px; 
@@ -105,6 +107,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-top: 2%;
             }
             .search-bar-buttons{
                 height: 40px;
@@ -151,7 +154,7 @@
                 <span class="material-icons-outlined" id="search-icon">search</span>
                 <input id="search-input" type="text">
             </div>
-            <div>
+            <div id="search-buttons-container">
                 <form style="display: inline" action="https://www.google.com/webhp?hl=en" method="get">
                     <button class="search-bar-buttons" id="google-search-button">Google Search</button>
                 </form>
