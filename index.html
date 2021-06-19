@@ -1,143 +1,176 @@
 <!DOCTYPE html>
-<style>
-    #all-element-flex-container {
-        /* position: relative; does this do anything???*/
-        /*flex: 1; does this do anything???*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    body{
-        margin:0;
-    }
-    #search-box{
-        display: flex;
-        align-items: center;
-        padding: 5px;
-        margin: 20px;
-        border-width: 1px;
-        border-color: white;
-        border-style: solid;
-        border-radius: 2em;
-        height: 30px;
-        box-shadow: 2px 2px 2px 2px gray;
-    }
-    #search-box:hover{
-        border-color: blue;
-    }
-    #search-input{
-        border: none;
-        outline:none;
-        width: 500px;
-    }
-    #google-logo {
-        width: 272px;
-        height: 92px;
-    }
-    #search-icon{
-        width: 20px;
-        height: 20px;
-        color: gray;
-    }
-   
-    #top-nav-bar{
-        margin-bottom: 100px;
-        margin-top: 5px;
-        display: flex;
-        flex-direction: row;
-        height: 40px;
-        justify-content: space-between;
-        width: 100%;
-    }
-    a{
-        font-size: 14px; 
-        color: rgb(34, 34, 34);
-        text-decoration: none;
-        font-family: arial, sans-serif;
-    }
-    a:hover{
-        text-decoration-line: underline;
-        text-decoration-color: rgb(34, 34, 34);
-    }
-    #sign-in-link{
-        width: 90px;
-        height: 35px;
-        font-size: 14px;
-        color: white;
-        background-color: rgb(26, 115, 232); 
-        border-width: 1px;
-        border-radius: 20%;
-    }
-    .nav-bar-left-elements{
-        margin-left: 15px;
-    }
-    .nav-bar-right-elements{
-        margin-right: 15px;
-    }
-    #top-nav-bar-left{
-        display: flex;
-        align-items: center;
-    }
-    #top-nav-bar-right{
-        display: flex;
-        /*justify-content: flex-end;*/
-        align-items: center;
-    }
-    #bottom-nav-bar{
-        background-color: rgb(242, 242, 242);
-        width: 100%; 
-        height: 50px; 
-        position: absolute;
-        bottom: 0;
-        margin:0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-</style>
 
 <html>
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-    <title>Google</title>
-    <meta charset="UTF-8"/>
-</head>
-<body>
-<div id="all-element-flex-container">
-    <div id="top-nav-bar">
-        <div id="top-nav-bar-left">
-            <a href="https://about.google/" id="about-link" class="nav-bar-left-elements">About</a>
-            <a href="https://store.google.com/CA/?hl=en" id="store-link" class="nav-bar-left-elements">Store</a>
+
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+        <title>Google</title>
+        <meta charset="UTF-8"/>
+        <style>
+            #all-element-flex-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            body{
+                margin:0;
+            }
+            #search-box{
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                margin: 20px;
+                border-width: 1px;
+                border-color: #dfe1e5;
+                border-style: solid;
+                border-radius: 2em;
+                height: 30px;
+            }
+            #search-box:hover{
+                box-shadow: 2px 2px 2px 2px #dfe1e5;
+            }
+            #search-input{
+                border: none;
+                outline:none;
+                width: 500px;
+            }
+            #google-logo {
+                width: 272px;
+                height: 92px;
+            }
+            #search-icon{
+                width: 20px;
+                height: 20px;
+                color: rgb(154, 160, 166);
+                margin: 5px;
+                font-size: 20px;
+            }
+            #top-nav-bar{
+                margin-bottom: 40px;
+                margin-top: 5px;
+                display: flex;
+                flex-direction: row;
+                height: 40px;
+                justify-content: space-between;
+                width: 100%;
+            }
+            a{
+                font-size: 14px; 
+                color: rgb(34, 34, 34);
+                text-decoration: none;
+                font-family: arial, sans-serif;
+            }
+            a:hover{
+                text-decoration-line: underline;
+                text-decoration-color: rgb(34, 34, 34);
+            }
+            #sign-in-link{
+                width: 90px;
+                height: 35px;
+                font-size: 14px;
+                color: white;
+                background-color: rgb(26, 115, 232); 
+                border: 0;
+                border-radius: 10%;
+            }
+            #sign-in-link:hover{
+                background-color: rgb(51, 131, 236); 
+            }
+            #sign-in-link:focus{
+                background-color: rgb(86, 149, 231); 
+            }
+            .nav-bar-left-elements{
+                margin-left: 15px;
+            }
+            .nav-bar-right-elements{
+                margin-right: 15px;
+            }
+            #top-nav-bar-left{
+                display: flex;
+                align-items: center;
+            }
+            #top-nav-bar-right{
+                display: flex;
+                align-items: center;
+            }
+            #bottom-nav-bar{
+                background-color: rgb(242, 242, 242);
+                width: 100%; 
+                height: 50px; 
+                position: fixed;
+                bottom: 0;
+                margin:0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .search-bar-buttons{
+                height: 40px;
+                width:130px; 
+                background-color: rgb(248, 249, 250);
+                font-size:14px;
+                color: #636669;
+                border-radius: 5px;
+                font-family: arial, sans-serif;
+                padding: 0;
+                border: 0;
+            }
+            .search-bar-buttons:hover{
+                color: #3c4043;
+                border: 1px solid rgba(106, 113, 119, 0.548);
+            }
+            .search-bar-buttons:focus{
+                border: 1px solid rgb(26, 115, 232);
+            }
+            #google-search-button{
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="all-element-flex-container">
+            <div id="top-nav-bar">
+                <div id="top-nav-bar-left">
+                    <a href="https://about.google/" id="about-link" class="nav-bar-left-elements">About</a>
+                    <a href="https://store.google.com/CA/?hl=en" id="store-link" class="nav-bar-left-elements">Store</a>
+                </div>
+                <div id="top-nav-bar-right">
+                    <a href="https://www.google.com/intl/en-GB/gmail/about/" id="gmail-link" class="nav-bar-right-elements">Gmail</a>
+                    <a href="https://www.google.ca/imghp?hl=en&ogbl" id="images-link" class="nav-bar-right-elements">Images</a>
+                    <a href="https://github.com/ahilashsasidharan"><span class="material-icons-outlined nav-bar-right-elements" id="app-icon">apps</span></a>
+                    <form style="display: inline" action="https://accounts.google.com/signin/v2/identifier?hl=en" method="get">
+                        <button id="sign-in-link" class="nav-bar-right-elements">Sign in</button>
+                    </form>
+                </div>
+            </div>
+            <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+            <div id="search-box">  
+                <span class="material-icons-outlined" id="search-icon">search</span>
+                <input id="search-input" type="text">
+            </div>
+            <div>
+                <form style="display: inline" action="https://www.google.com/webhp?hl=en" method="get">
+                    <button class="search-bar-buttons" id="google-search-button">Google Search</button>
+                </form>
+                <form style="display: inline" action="https://www.google.com/doodles" method="get">
+                    <button class="search-bar-buttons">I'm Feeling Lucky</button> 
+                </form>
+            </div>
+            <div id="bottom-nav-bar">
+                <div id="bottom-nav-bar-left">
+                    <a href="https://ads.google.com/intl/en_ca/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" class="nav-bar-left-elements">Advertising</a>
+                    <a href="https://smallbusiness.withgoogle.com/intl/en_ca/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=CA#!/" class="nav-bar-left-elements">Business</a>
+                    <a href="https://www.google.com/search/howsearchworks/?fg=1" class="nav-bar-left-elements">How Search Works</a>
+                </div>
+                <div id="bottom-nav-bar-right">
+                    <a href="https://policies.google.com/privacy?hl=en-CA&fg=1" class="nav-bar-right-elements">Privacy</a>
+                    <a href="https://policies.google.com/terms?hl=en-CA&fg=1" class="nav-bar-right-elements">Terms</a>
+                    <a href="https://github.com/ahilashsasidharan" class="nav-bar-right-elements">Settings</a>
+                </div>  
+            </div>
         </div>
-        <div id="top-nav-bar-right">
-            <a href="https://www.google.com/intl/en-GB/gmail/about/" id="gmail-link" class="nav-bar-right-elements">Gmail</a>
-            <a href="https://www.google.ca/imghp?hl=en&ogbl" id="images-link" class="nav-bar-right-elements">Images</a>
-            <span class="material-icons-outlined nav-bar-right-elements" id="app-icon">apps</span>
-            <a href="https://github.com/ahilashsasidharan"><button id="sign-in-link" class="nav-bar-right-elements">Sign in</button></a>
-        </div>
-    </div>
-    <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
-    <div id="search-box">  
-        <span class="material-icons-outlined" id="search-icon">search</span>
-        <input id="search-input" type="text">
-    </div>
-    <div>
-        <button class="buttons">Google Search</button>
-        <button class="buttons">I'm Feeling Lucky</button> 
-    </div>
-    <div id="bottom-nav-bar">
-        <div>
-            <a href="#" class="nav-bar-left-elements">Advertising</a>
-            <a href="#" class="nav-bar-left-elements">Business</a>
-            <a href="#" class="nav-bar-left-elements">How Search Works</a>
-        </div>
-        <div>
-            <a href="#" class="nav-bar-right-elements">Privacy</a>
-            <a href="#" class="nav-bar-right-elements">Terms</a>
-            <a href="#" class="nav-bar-right-elements">Settings</a>
-        </div>  
-    </div>
-</div>
-</body>
+    </body>
+
 </html>
